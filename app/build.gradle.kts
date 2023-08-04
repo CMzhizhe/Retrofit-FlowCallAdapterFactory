@@ -14,7 +14,7 @@ android {
         minSdk = Dependency.Base.minSdk
         targetSdk = Dependency.Base.targetSdk
         vectorDrawables.useSupportLibrary = true
-        
+
     }
 
     buildTypes {
@@ -61,5 +61,5 @@ dependencies {
     implementation(Dependency.Network.okhttp)
     implementation(Dependency.Network.okhttpLogging)
 
-
+    implementation(project(":flow-call-adapter-factory"))
 }
