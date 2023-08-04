@@ -14,8 +14,7 @@ android {
         minSdk = Dependency.Base.minSdk
         targetSdk = Dependency.Base.targetSdk
         vectorDrawables.useSupportLibrary = true
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        
     }
 
     buildTypes {
@@ -44,9 +43,7 @@ android {
         jvmTarget = "1.8"
     }
 
-    testOptions {
-        unitTests.isReturnDefaultValues = true
-    }
+
 }
 
 dependencies {
@@ -64,10 +61,5 @@ dependencies {
     implementation(Dependency.Network.okhttp)
     implementation(Dependency.Network.okhttpLogging)
 
-    Dependency.AndroidTest.run {
-        testImplementation(junit5)
-        testImplementation(mockito)
-        testImplementation(mockitoKotlin)
-        testRuntimeOnly(engine)
-    }
+
 }

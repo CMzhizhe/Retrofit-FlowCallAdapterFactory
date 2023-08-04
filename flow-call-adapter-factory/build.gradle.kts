@@ -1,7 +1,6 @@
 import tech.thdev.gradle.dependencies.Dependency
 import tech.thdev.gradle.locals.apis
-import tech.thdev.gradle.locals.testImplementations
-import tech.thdev.gradle.locals.testRuntimeOnlys
+
 
 plugins {
     id("com.android.library")
@@ -9,10 +8,7 @@ plugins {
     kotlin("kapt")
 }
 
-ext["libraryName"] = "flow-call-adapter-factory"
-ext["libraryVersion"] = "1.0.0"
-ext["description"] = "Android Retrofit FlowCallAdapterFactory"
-ext["url"] = "https://thdev.tech/Retrofit-FlowCallAdapterFactory/"
+
 
 android {
     compileSdk = Dependency.Base.compileVersion
@@ -26,12 +22,10 @@ android {
 
     buildTypes {
         getByName("debug") {
-            isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
 
         getByName("release") {
-            isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
@@ -51,12 +45,7 @@ android {
             enabled = false
         }
     }
-    // Junit 5 사용을 위해
-    testOptions {
-        unitTests.all {
-            it.useJUnitPlatform()
-        }
-    }
+
 }
 
 dependencies {
@@ -66,21 +55,5 @@ dependencies {
         Dependency.Coroutines.core,
     )
 
-    Dependency.Coroutines.run {
-        testImplementations(
-            turbine,
-            test
-        )
-    }
-    Dependency.AndroidTest.run {
-        testImplementations(
-            junit5,
-            mockito,
-            mockitoKotlin,
-        )
-        testRuntimeOnlys(
-            engine,
-        )
-    }
-    testImplementation(Dependency.Network.okhttp3MockWebServer)
+
 }
