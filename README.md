@@ -1,5 +1,6 @@
 # Summary
-Android Retrofit FlowCallAdapterFactory
+
+# 注意！！ [原本gitHub地址](https://github.com/taehwandev/Retrofit-FlowCallAdapterFactory) 我只是降低了min版本为21
 
 Retrofit 2 `CallAdapter.Factory` for `kotlin coroutine's Flow<T>`
 

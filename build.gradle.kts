@@ -7,6 +7,7 @@ buildscript {
     dependencies {
         classpath(tech.thdev.gradle.dependencies.Gradle.android)
         classpath(tech.thdev.gradle.dependencies.Gradle.kotlin)
+        classpath("com.android.tools.build:gradle:7.2.0")
     }
 }
 

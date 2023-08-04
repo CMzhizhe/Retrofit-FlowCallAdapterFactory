@@ -6,7 +6,7 @@ object Dependency {
         const val buildToolsVersion = "31.0.0"
         const val compileVersion = 31
         const val targetSdk = 31
-        const val minSdk = 23
+        const val minSdk = 21
     }
 
     object Kotlin {

@@ -7,7 +7,6 @@ plugins {
     id("com.android.library")
     kotlin("android")
     kotlin("kapt")
-    id("lib-publish")
 }
 
 ext["libraryName"] = "flow-call-adapter-factory"
@@ -22,8 +21,6 @@ android {
     defaultConfig {
         minSdk = Dependency.Base.minSdk
         targetSdk = Dependency.Base.targetSdk
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
 

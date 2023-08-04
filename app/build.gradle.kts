@@ -2,7 +2,6 @@ import tech.thdev.gradle.dependencies.Dependency
 
 plugins {
     id("com.android.application")
-
     kotlin("android")
     kotlin("kapt")
 }
