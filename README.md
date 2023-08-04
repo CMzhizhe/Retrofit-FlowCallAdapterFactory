@@ -2,6 +2,17 @@
 
 # 注意！！ [原本gitHub地址](https://github.com/taehwandev/Retrofit-FlowCallAdapterFactory) 我只是降低了min版本为21
 
+#### 依赖引入
+```
+maven { url 'https://jitpack.io' }
+
+
+dependencies {
+	   implementation 'com.github.CMzhizhe:Retrofit-FlowCallAdapterFactory:v1.0.0'
+	}
+```
+
+
 Retrofit 2 `CallAdapter.Factory` for `kotlin coroutine's Flow<T>`
 
 # Usage
